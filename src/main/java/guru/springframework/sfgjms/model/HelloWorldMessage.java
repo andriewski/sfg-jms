@@ -18,4 +18,12 @@ public class HelloWorldMessage implements Serializable {
 
     private UUID id;
     private String message;
+
+    public static HelloWorldMessage getMessage(String message) {
+        return HelloWorldMessage
+                .builder()
+                .id(UUID.randomUUID())
+                .message(message)
+                .build();
+    }
 }
